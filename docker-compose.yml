@@ -1,0 +1,20 @@
+version: "3"
+services:
+     Application:
+       image: hussain515/devopslife-app:latest
+       ports:
+         - "81:80"
+       deploy:
+         replicas: 3 
+     movies:
+       image: hussain515/movies-app:latest
+       ports:
+         - "82:80"
+       deploy:
+         replicas: 3
+     mobilebanking:
+       image: hussain515/phonepay-app:latest
+       ports:
+         - "83:80"
+       deploy: 
+         replicas: 3
